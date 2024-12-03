@@ -11,7 +11,7 @@ const OrdersList = () => {
   const { orders, meta } = useLoaderData();
   const [modalIsOpen, setIsOpen] = useState(false);
 
-  console.log("orders: ", orders);
+  // console.log("orders: ", orders);
 
   return (
     <div className="mt-4">

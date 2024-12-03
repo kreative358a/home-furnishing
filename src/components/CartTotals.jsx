@@ -5,10 +5,10 @@ const CartTotals = () => {
   const { cartTotal, shipping, tax, orderTotal } = useSelector(
     (state) => state.cartState
   );
-  console.log(
-    "useSelector((state) => state.cartState)",
-    useSelector((state) => state.cartState)
-  );
+  // console.log(
+  //   "useSelector((state) => state.cartState)",
+  //   useSelector((state) => state.cartState)
+  // );
   return (
     <div className="card bg-base-200 max-lg:w-[50%] max-lg:min-w-[400px]">
       <div className="card-body">

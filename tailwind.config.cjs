@@ -11,7 +11,8 @@ export default {
         winter: {
           ...require("daisyui/src/theming/themes")["winter"],
           primary: "DeepSkyBlue",
-          secondary: "rgb(28, 210, 220)",
+          // secondary: "rgb(28, 210, 220)",
+          secondary: "rgb(10, 70, 90)",
           accent: "Plum",
           error: "Crimson",
           neutral: "rgb(120, 140, 180)",
@@ -21,7 +22,8 @@ export default {
         night: {
           ...require("daisyui/src/theming/themes")["night"],
           primary: "MidnightBlue",
-          secondary: "rgb(10, 70, 90)",
+          // secondary: "rgb(10, 70, 90)",
+          secondary: "rgb(28, 210, 220)",
           accent: "Purple",
           error: "Crimson",
           neutral: "rgb(20, 40, 80)",

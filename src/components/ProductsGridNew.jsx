@@ -35,35 +35,6 @@ const ProductsGridNew = () => {
   const [category, setCategory] = useState(null);
   const n = 3;
 
-  // useEffect(() => {
-  //   getProducts(products);
-  // }, []);
-
-  // const getProducts = (products) => {
-  //   setArticles(products);
-  // };
-
-  // const byCategory = (article, category) => {
-  //   if (category && category != "all") {
-  //     return article.attributes.category === category;
-  //   } else return article;
-  // };
-  // const bySearch = (article, search) => {
-  //   if (search) {
-  //     console.log(search);
-  //     // return article.title.includes(search);
-  //     return article.attributes.title
-  //       .toLowerCase()
-  //       .includes(search.toLowerCase());
-  //   } else return article;
-  // };
-
-  // // const filteredList = (articles, category, search) => {
-  // const filteredList = (articles, category, search) => {
-  //   return articles
-  //     .filter((article) => byCategory(article, category))
-  //     .filter((article) => bySearch(article, search));
-  // };
 
   useEffect(() => {
     setArticles(products);
@@ -77,27 +48,10 @@ const ProductsGridNew = () => {
     );
   }, [page]);
 
-  console.log("products.length: ", products.length);
+  // console.log("products.length: ", products.length);
   return (
     <>
-      {/* <div className="bg-base-200 rounded-md px-8 py-4 grid gap-x-4  gap-y-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-center">
-        <FormInputMy
-          type="search"
-          label="search product"
-          name="search"
-          size="input-sm"
-          defaultValue={search}
-          onChange={(e) => setSearch(e.target.value)}
-        />
-        <FormSelectMy
-          label="select category"
-          name="category"
-          list={categories}
-          size="select-sm"
-          defaultValue={category}
-          onChange={(e) => setCategory(e.target.value)}
-        />
-      </div> */}
+
       <div className="pt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
         {filterData &&
           filterData.map((article, index) => {

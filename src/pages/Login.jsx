@@ -44,7 +44,7 @@ export const action =
 
     try {
       const response = await customFetchStrapi.post("/auth/local", data);
-      console.log("response: ", response);
+      // console.log("response: ", response);
       store.dispatch(loginUser(response.data));
       toast.success("logged in successfully");
       return redirect("/");
@@ -65,8 +65,8 @@ const Login = () => {
   const loginAsGuestUser = async () => {
     try {
       const response = await customFetchStrapi.post("/auth/local", {
-        identifier: "test@test.com",
-        password: "secret",
+        identifier: "peter.parker@avengers.xyy",
+        password: "Bonum12",
       });
       dispatch(loginUser(response.data));
       toast.success("welcome guest user");
@@ -114,24 +114,11 @@ const Login = () => {
         })}
       </Swiper>
       <div
-        className="div-scrollbar pt-2 pb-8 sm:pt-6 lg:mt-2 bg-base-100/15 px-2"
-        style={{
-          position: "fixed",
-          zIndex: 8,
-          minWidth: "100%",
-          minHeight: "90%",
-          maxHeight: "90%",
-          maxWidth: "100%",
-          top: "10.8%",
-          alignItems: "center",
-          justifyContent: "center",
-          flexDirection: "column",
-          left: 0,
-        }}
+        className="mainContent pt-0 lg:mt-2 bg-base-100/15 px-2"
       >
         <section className="justify-items-center mx-auto">
           {/* <section className="h-screen grid place-items-center"> */}
-          <div className="my-12">
+          <div className="my-6">
             <Link to="/" className="btn btn-secondary text-base sm:text-lg">
               go back home
             </Link>
@@ -146,20 +133,15 @@ const Login = () => {
             <div className="mt-4">
               <SubmitBtn text="login" />
             </div>
-            {/* <button
+            <div className="mt-4">
+            <button
       type="button"
       className="btn btn-secondary btn-block"
       onClick={loginAsGuestUser}
     >
       guest user
     </button>
-    <button
-      type="button"
-      className="btn btn-secondary btn-block"
-      onClick={loginAsGuestUser}
-    >
-      login
-    </button> */}
+    </div>
             <p className="text-center text-base sm:text-lg">
               Not a member yet?{" "}
               <Link

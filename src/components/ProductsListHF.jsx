@@ -57,10 +57,10 @@ const getArticlesPerPageFromSessionStorage = () => {
 // };
 
 const getSelectCategoryFromSessionStorage = () => {
-  console.log(
-    'localStorage.getItem("selectCategory")',
-    localStorage.getItem("selectCategory")
-  );
+  // console.log(
+  //   'localStorage.getItem("selectCategory")',
+  //   localStorage.getItem("selectCategory")
+  // );
   return localStorage.getItem("selectCategory") || "all";
 };
 
@@ -81,10 +81,10 @@ const getSelectCategoryFromSessionStorage = () => {
 // };
 
 const getCurrentPageFromSessionStorage = () => {
-  console.log(
-    'localStorage.getItem("currentPage")',
-    localStorage.getItem("currentPage")
-  );
+  // console.log(
+  //   'localStorage.getItem("currentPage")',
+  //   localStorage.getItem("currentPage")
+  // );
   return localStorage.getItem("currentPage") || 1;
 };
 
@@ -146,12 +146,12 @@ const ProductsGridHF = () => {
         : 0
     );
     const dataSize = byteSize(newData) / 1024;
-    console.log("dataSize.toFixed(2): ", dataSize.toFixed(2));
+    // console.log("dataSize.toFixed(2): ", dataSize.toFixed(2));
     setData(newData); // set your data to state
     setDataCopy(newData);
-    console.log(" useEffect hfApi");
+    // console.log(" useEffect hfApi");
     let hfApi = renderData(newData); // render your component
-    console.log("1. hfApi.length: ", hfApi.length);
+    // console.log("1. hfApi.length: ", hfApi.length);
     setHFApi(hfApi); // set it to state
   }, []);
 
@@ -163,7 +163,7 @@ const ProductsGridHF = () => {
       const { typeName, name, price, image, url, imageAlt, categoryPath } =
         product;
       const id = product.id;
-      console.log("id: ", id);
+      // console.log("id: ", id);
       // const dollarsAmount = formatPrice(price);
       const dollarsAmount = price.currentPrice;
       const categoryName = categoryPath[1].name;
@@ -268,7 +268,7 @@ const ProductsGridHF = () => {
     // localStorage.setItem("currentPage", 1);
     localStorage.setItem("selectCategory", event.target.value);
     setSelectCategory(getSelectCategoryFromSessionStorage);
-    console.log("handleSelectCategory selectCategory: ", selectCategory);
+    // console.log("handleSelectCategory selectCategory: ", selectCategory);
     // setDataCopy(data);
     //
     setDataCopy(data);
@@ -531,7 +531,7 @@ const ProductsGridHF = () => {
     }
   };
 
-  console.log("selectedMaxPrice: ", selectedMaxPrice);
+  // console.log("selectedMaxPrice: ", selectedMaxPrice);
 
   const handleResetButton = () => {
     setCurrentPage(1);
@@ -561,7 +561,7 @@ const ProductsGridHF = () => {
   const paginate = (pageNumber) => {
     // console.log("keyword", search);
     // console.log("pathname", pathname);
-    console.log("location: ", location);
+    // console.log("location: ", location);
     // localStorage.setItem("currentPage", pageNumber);
     setCurrentPage(pageNumber);
     localStorage.setItem("currentPage", pageNumber);
@@ -576,7 +576,7 @@ const ProductsGridHF = () => {
 
     // setCurrentPage(pageNumber);
     // setCurrentPath(`${pathname}${search}?page=${pageNumber}`);
-    console.log();
+    // console.log();
     // navigate(`${currentUrl}`);
   };
   // console.log("currentPath: ", currentPath);

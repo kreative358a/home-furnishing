@@ -22,10 +22,10 @@ const PaginationContainerHF = () => {
 
   // console.log("page", page);
 
-  console.log("search", search);
+  // console.log("search", search);
   useEffect(() => {
     const pageNum = parseInt(search.split("=")[1]) || 1;
-    console.log("pageNum", pageNum);
+    // console.log("pageNum", pageNum);
     setCurrentPage(pageNum);
   }, []);
 

@@ -22,8 +22,11 @@ const Header = () => {
       style={{
         minWidth: "100%",
         height: "auto",
-        position: "relative",
-        zIndex: 10,
+        position: "fixed",
+        zIndex: 11,
+        display: "flex",
+        top: 0,
+        height: '40px'
       }}
       className="bg-neutral/90 py-2 text-neutral-content "
     >

@@ -17,7 +17,7 @@ const getLayoutFromLocalStorage = () => {
 const ProductsContainer = () => {
   const { meta, params } = useLoaderData();
   const totalProducts = meta.pagination.total;
-  console.log("totalProducts", totalProducts);
+  // console.log("totalProducts", totalProducts);
   const [layout, setLayout] = useState(getLayoutFromLocalStorage);
   // const [layout, setLayout] = useState("grid");
 

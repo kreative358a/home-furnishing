@@ -57,10 +57,10 @@ const getArticlesPerPageFromLocalStorage = () => {
 // };
 
 const getSelectCategoryFromLocalStorage = () => {
-  console.log(
-    'localStorage.getItem("selectCategory")',
-    localStorage.getItem("selectCategory")
-  );
+  // console.log(
+  //   'localStorage.getItem("selectCategory")',
+  //   localStorage.getItem("selectCategory")
+  // );
   return localStorage.getItem("selectCategory") || "all";
 };
 
@@ -133,12 +133,12 @@ const ProductsGridHF = () => {
         : 0
     );
     const dataSize = byteSize(newData) / 1024;
-    console.log("dataSize.toFixed(2): ", dataSize.toFixed(2));
+    // console.log("dataSize.toFixed(2): ", dataSize.toFixed(2));
     setData(newData); // set your data to state
     setDataCopy(newData);
-    console.log(" useEffect hfApi");
+    // console.log(" useEffect hfApi");
     let hfApi = renderData(newData); // render your component
-    console.log("1. hfApi.length: ", hfApi.length);
+    // console.log("1. hfApi.length: ", hfApi.length);
     setHFApi(hfApi); // set it to state
   }, []);
 
@@ -218,8 +218,8 @@ const ProductsGridHF = () => {
       ); // render filtered data
       setHFApi(newDataRender);
       // and set it to state
-      console.log("newDataRender.length: ", newDataRender.length);
-      console.log("hfApi.length: ", hfApi.length);
+      // console.log("newDataRender.length: ", newDataRender.length);
+      // console.log("hfApi.length: ", hfApi.length);
       return true;
     }
     if (selectCategory !== "all") {
@@ -245,7 +245,7 @@ const ProductsGridHF = () => {
     setCurrentPage(1);
     localStorage.setItem("selectCategory", event.target.value);
     setSelectCategory(getSelectCategoryFromLocalStorage);
-    console.log("handleSelectCategory selectCategory: ", selectCategory);
+    // console.log("handleSelectCategory selectCategory: ", selectCategory);
     // setDataCopy(data);
     //
     setDataCopy(data);
@@ -535,8 +535,8 @@ const ProductsGridHF = () => {
   const paginate = (pageNumber) => {
     // console.log("keyword", search);
     // console.log("pathname", pathname);
-    console.log("location: ", location);
-    console.log("uselocation: ", uselocation);
+    // console.log("location: ", location);
+    // console.log("uselocation: ", uselocation);
     setCurrentPage(pageNumber);
     // new URL(".", window.origin + location.pathname + "/");
     // const currentUrl = new URL(`${pathname}${search}#page=${pageNumber}`);
@@ -545,7 +545,7 @@ const ProductsGridHF = () => {
 
     // setCurrentPage(pageNumber);
     // setCurrentPath(`${pathname}${search}?page=${pageNumber}`);
-    console.log();
+    // console.log();
     // navigate(`${currentUrl}`);
   };
   // console.log("currentPath: ", currentPath);

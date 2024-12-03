@@ -19,7 +19,7 @@ const HomeLayout = () => {
       {isPageLoading ? (
         <Loading />
       ) : (
-        <section className="align-element py-4 md:py-8 lg:py-12">
+        <section className="align-element py-0 md:py-6 lg:py-10">
           <Outlet />
         </section>
       )}

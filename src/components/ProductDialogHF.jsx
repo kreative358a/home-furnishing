@@ -49,7 +49,7 @@ const ProductsDialogHF = ({ id, product }) => {
 
   useEffect(() => {
     const product_color = image.split("__")[0].split("-").slice(-1)[0];
-    console.log("product_color: ", product_color);
+    // console.log("product_color: ", product_color);
     listColors.push(product_color);
     setProductColor(product_color);
   }, []);
@@ -114,12 +114,12 @@ const ProductsDialogHF = ({ id, product }) => {
     // setProductColor(event.target.value || "transparent");
 
     setProductColor(event.target.value);
-    console.log("color: ", event.target.value);
-    console.log(
-      "productPrices[event.target.value]: ",
-      productPrices[event.target.value]
-    );
-    console.log("productPrices: ", productPrices);
+    // console.log("color: ", event.target.value);
+    // console.log(
+    //   "productPrices[event.target.value]: ",
+    //   productPrices[event.target.value]
+    // );
+    // console.log("productPrices: ", productPrices);
     setProductPrice(productPrices[event.target.value]);
     // setProductPrice(productPrices.color);
     // console.log("productsColor: ", productsColor);
@@ -169,7 +169,7 @@ const ProductsDialogHF = ({ id, product }) => {
     // listColors.push(mainColor);
     dictColorPrice[mainColor[0]] = price.currentPrice;
     if (variants) {
-      console.log("variants.length: ", variants.length);
+      // console.log("variants.length: ", variants.length);
       variants.map((variant) => {
         const { image, contextualImageUrl, url, price } = variant;
         listPhotos.push(image);

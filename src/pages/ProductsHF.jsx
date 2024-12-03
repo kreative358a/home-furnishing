@@ -165,22 +165,22 @@ const ProductsHF = () => {
         })}
       </Swiper>
       <div
-        className="div-scrollbar pt-2 pb-8 sm:pt-6 lg:mt-2"
-        style={{
-          position: "fixed",
-          zIndex: 9,
-          minWidth: "100%",
-          maxHeight: "90%",
-          maxWidth: "100%",
-          // minHeight: "100%",
-          top: "12%",
-          alignItems: "center",
-          justifyContent: "center",
-          flexDirection: "column",
-          left: 0,
-          paddingLeft: "20px",
-          paddingRight: "20px",
-        }}
+        className="productsContent pt-4 pb-8 sm:pt-8 lg:mt-2"
+        // style={{
+        //   position: "fixed",
+        //   zIndex: 9,
+        //   minWidth: "100%",
+        //   maxHeight: "90%",
+        //   maxWidth: "100%",
+        //   // minHeight: "100%",
+        //   top: "12%",
+        //   alignItems: "center",
+        //   justifyContent: "center",
+        //   flexDirection: "column",
+        //   left: 0,
+        //   paddingLeft: "20px",
+        //   paddingRight: "20px",
+        // }}
       >
         <FiltersHF />
         <ProductsContainerHF />

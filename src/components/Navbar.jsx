@@ -48,8 +48,10 @@ const Navbar = () => {
       style={{
         minWidth: "100%",
         height: "auto",
-        position: "relative",
-        zIndex: 10,
+        position: "fixed",
+        zIndex: 11,
+        top: "40px",
+        display: "flex",
       }}
     >
       <div className="navbar align-element">

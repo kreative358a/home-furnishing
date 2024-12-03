@@ -27,7 +27,7 @@ export const loader =
     const response = await queryClient.ensureQueryData(
       singleProductQuery(params.id)
     );
-    console.log("response.data: ", response.data);
+    // console.log("response.data: ", response.data);
     const imageUrl = response.data.image;
     const productUrl = response.data.url;
 
@@ -38,8 +38,8 @@ export const loader =
 
 const SingleProductHF = () => {
   const { product } = useLoaderData();
-  console.log("product: ", product);
-  console.log("typeof product: ", typeof product);
+  // console.log("product: ", product);
+  // console.log("typeof product: ", typeof product);
   const { image, typeName, name, price, imageAlt, url } = product[0];
   const navigate = useNavigate();
   // const dollarsAmount = price.currentPrice;
@@ -63,7 +63,7 @@ const SingleProductHF = () => {
 
   useEffect(() => {
     setProductColor(product_color);
-    console.log("url: ", url);
+    // console.log("url: ", url);
   }, []);
   let myList = [];
   let mySet = new Set();
@@ -87,7 +87,7 @@ const SingleProductHF = () => {
       const html = await response.text();
       const parser = new DOMParser();
       const doc = parser.parseFromString(html, "text/html");
-      console.log("doc: ", doc);
+      // console.log("doc: ", doc);
       const desc = doc.getElementsByClassName(
         "pip-product-summary__description"
       )[0];
@@ -102,14 +102,14 @@ const SingleProductHF = () => {
           .split("-")
           .slice(-1);
         // let color = colorSrc.split("__")[0].split("-").slice(-1);
-        console.log("colorSrc: ", colorSrc);
+        // console.log("colorSrc: ", colorSrc);
         myList.push(colorSrc[0]);
         mySet.add(colorSrc[0]);
       }
       setDescript(desc_try);
       setProductsColor(myList);
       setColorsReady(mySet);
-      console.log("desc_try: ", desc_try);
+      // console.log("desc_try: ", desc_try);
     } catch (error) {
       console.log(error);
     }

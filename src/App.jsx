@@ -1,7 +1,7 @@
-import { useState } from "react";
+// import { useState } from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+// import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import {
   About,
   Cart,
@@ -11,10 +11,8 @@ import {
   Landing,
   Login,
   Orders,
-  Products,
   ProductsHF,
   Register,
-  SingleProduct,
   SingleProductHF,
 } from "./pages";
 
@@ -22,9 +20,9 @@ import { ErrorElement } from "./components";
 
 // loaders
 import { loader as landingLoader } from "./pages/Landing";
-import { loader as singleProductLoader } from "./pages/SingleProduct";
+// import { loader as singleProductLoader } from "./pages/SingleProduct";
 import { loader as singleProductLoaderHF } from "./pages/SingleProductHF";
-import { loader as productsLoader } from "./pages/Products";
+// import { loader as productsLoader } from "./pages/Products";
 import { loader as productsLoaderHF } from "./pages/ProductsHF";
 import { loader as checkoutLoader } from "./pages/Checkout";
 import { loader as ordersLoader } from "./pages/Orders";
@@ -47,9 +45,6 @@ const queryClient = new QueryClient({
 const router = createBrowserRouter(
   [
     {
-      // future: {
-      //   v7_partialHydration: true,
-      // },
       path: "/",
       element: <HomeLayout />,
       errorElement: <Error />,
@@ -60,21 +55,13 @@ const router = createBrowserRouter(
           errorElement: <ErrorElement />,
           loader: landingLoader(queryClient),
         },
-        {
-          path: "products",
-          element: <Products />,
-          errorElement: <ErrorElement />,
-          loader: productsLoader(queryClient),
-        },
         // {
         //   path: "products",
-        //   children: [{
-        //     path: "*",
-        //     element: <SingleProduct />,
-        //     errorElement: <ErrorElement />,
-        //     loader: singleProductLoader(queryClient),
-        //   }]
+        //   element: <Products />,
+        //   errorElement: <ErrorElement />,
+        //   loader: productsLoader(queryClient),
         // },
+
         {
           path: "products-hf",
           element: <ProductsHF />,
@@ -82,21 +69,13 @@ const router = createBrowserRouter(
           loader: productsLoaderHF(queryClient),
         },
 
-        {
-          path: "products/:id",
-          element: <SingleProduct />,
-          errorElement: <ErrorElement />,
-          loader: singleProductLoader(queryClient),
-        },
         // {
-        // path: "products/:id",
-        // children: [{
-        //   path: "*",
+        //   path: "products/:id",
         //   element: <SingleProduct />,
         //   errorElement: <ErrorElement />,
         //   loader: singleProductLoader(queryClient),
-        // }]
         // },
+
         {
           path: "products-hf/:id",
           element: <SingleProductHF />,
@@ -155,7 +134,7 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <RouterProvider router={router} />
-      <ReactQueryDevtools initialIsOpen={false} />
+      {/* <ReactQueryDevtools initialIsOpen={false} /> */}
     </QueryClientProvider>
   );
 }

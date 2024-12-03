@@ -63,7 +63,7 @@ const CartDialog = ({ basketId }) => {
                 </div>
               ) : (
                 // </Link>
-                <div class="modal-action w-[100%] mb-4">
+                <div className="modal-action w-[100%] mb-4">
                   <form method="dialog" className="w-[100%]">
                     <button
                       className="btn btn-primary btn-block mt-4 "

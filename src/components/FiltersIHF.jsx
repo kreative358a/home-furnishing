@@ -13,7 +13,7 @@ const FiltersHF = () => {
   // const { search, keyword, company, category, shipping, order, price } = params;
   const { keyword, category } = params;
   const totalProducts = total;
-  console.log("keyword: ", keyword);
+  // console.log("keyword: ", keyword);
   const [selectedValue, setSelectedValue] = useState("");
   const [inputValue, setInputValue] = useState("");
 
@@ -44,7 +44,7 @@ const FiltersHF = () => {
   //   // alert(`Submitted value: ${inputValue}`);
   // };
   // onSubmit={handleSubmit}
-  console.log("inputValue", inputValue);
+  // console.log("inputValue", inputValue);
   return (
     <>
       <div className="text-base md:text-lg bg-base-200/80 w-[100%] max-w-[800px]  mx-auto rounded-md px-8 py-4 grid gap-x-4 gap-y-8 sm:grid-cols-2 items-center ">

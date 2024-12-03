@@ -19,7 +19,7 @@ const getLayoutFromLocalStorage = () => {
 const ProductsContainerHF = () => {
   const { total, params } = useLoaderData();
   const totalProducts = total;
-  console.log("totalProducts", totalProducts);
+  // console.log("totalProducts", totalProducts);
   const [layout, setLayout] = useState(getLayoutFromLocalStorage);
 
   const setActiveStyles = (pattern) => {

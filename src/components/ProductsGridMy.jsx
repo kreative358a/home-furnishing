@@ -35,10 +35,10 @@ const pages = [12, 24, 48];
 const sorts = ["a-z", "z-a", "low-high", "high-low"];
 
 const getArticlesPerPageFromLocalStorage = () => {
-  console.log(
-    'localStorage.getItem("articlesPerPage")',
-    localStorage.getItem("articlesPerPage")
-  );
+  // console.log(
+  //   'localStorage.getItem("articlesPerPage")',
+  //   localStorage.getItem("articlesPerPage")
+  // );
   return localStorage.getItem("articlesPerPage") || 24;
 };
 
@@ -51,10 +51,10 @@ const getArticlesPerPageFromLocalStorage = () => {
 // };
 
 const getSelectCategoryFromLocalStorage = () => {
-  console.log(
-    'localStorage.getItem("selectCategory")',
-    localStorage.getItem("selectCategory")
-  );
+  // console.log(
+  //   'localStorage.getItem("selectCategory")',
+  //   localStorage.getItem("selectCategory")
+  // );
   return localStorage.getItem("selectCategory") || "all";
 };
 
@@ -122,12 +122,12 @@ const ProductsGridMy = () => {
         : 0
     );
     const dataSize = byteSize(newData) / 1024;
-    console.log("dataSize.toFixed(2): ", dataSize.toFixed(2));
+    // console.log("dataSize.toFixed(2): ", dataSize.toFixed(2));
     setData(newData); // set your data to state
     setDataCopy(newData);
-    console.log(" useEffect hfApi");
+    // console.log(" useEffect hfApi");
     let hfApi = renderData(newData); // render your component
-    console.log("1. hfApi.length: ", hfApi.length);
+    // console.log("1. hfApi.length: ", hfApi.length);
     setHFApi(hfApi); // set it to state
   }, []);
 
@@ -189,8 +189,8 @@ const ProductsGridMy = () => {
       ); // render filtered data
       setHFApi(newDataRender);
       // and set it to state
-      console.log("newDataRender.length: ", newDataRender.length);
-      console.log("hfApi.length: ", hfApi.length);
+      // console.log("newDataRender.length: ", newDataRender.length);
+      // console.log("hfApi.length: ", hfApi.length);
       return true;
     }
     if (selectCategory !== "all") {
@@ -216,7 +216,7 @@ const ProductsGridMy = () => {
     setCurrentPage(1);
     localStorage.setItem("selectCategory", event.target.value);
     setSelectCategory(getSelectCategoryFromLocalStorage);
-    console.log("handleSelectCategory selectCategory: ", selectCategory);
+    // console.log("handleSelectCategory selectCategory: ", selectCategory);
     // setDataCopy(data);
     //
     setDataCopy(data);
@@ -477,7 +477,7 @@ const ProductsGridMy = () => {
     }
   };
 
-  console.log("selectedMaxPrice: ", selectedMaxPrice);
+  // console.log("selectedMaxPrice: ", selectedMaxPrice);
 
   const handleResetButton = () => {
     setCurrentPage(1);

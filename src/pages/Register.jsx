@@ -91,23 +91,23 @@ const Register = () => {
         })}
       </Swiper>
       <div
-        className="div-scrollbar pt-2 pb-8 sm:pt-6 lg:mt-2 bg-base-100/15 px-2"
-        style={{
-          position: "fixed",
-          zIndex: 8,
-          minWidth: "100%",
-          minHeight: "90%",
-          maxHeight: "90%",
-          maxWidth: "100%",
-          top: "10.8%",
-          alignItems: "center",
-          justifyContent: "center",
-          flexDirection: "column",
-          left: 0,
-        }}
+        className="mainContent pt-0  lg:mt-2 bg-base-100/15 px-2"
+        // style={{
+        //   position: "fixed",
+        //   zIndex: 8,
+        //   minWidth: "100%",
+        //   minHeight: "90%",
+        //   maxHeight: "90%",
+        //   maxWidth: "100%",
+        //   top: "10.8%",
+        //   alignItems: "center",
+        //   justifyContent: "center",
+        //   flexDirection: "column",
+        //   left: 0,
+        // }}
       >
         <section className="justify-items-center mx-auto">
-          <div className="my-12">
+          <div className="my-6 2xl:my-10">
             <Link
               to="/"
               className="btn btn-secondary  text-base sm:text-lg xl:text-xl"

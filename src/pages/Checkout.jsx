@@ -87,20 +87,7 @@ const Checkout = () => {
         })}
       </Swiper>
       <div
-        className="div-scrollbar pt-2 pb-8 sm:pt-6 lg:mt-2 bg-base-200/15 px-2"
-        style={{
-          position: "fixed",
-          zIndex: 8,
-          minWidth: "100%",
-          minHeight: "90%",
-          maxHeight: "90%",
-          maxWidth: "100%",
-          top: "11.4%",
-          alignItems: "center",
-          justifyContent: "center",
-          flexDirection: "column",
-          left: 0,
-        }}
+className="mainContent pt-4 lg:mt-2 bg-base-100/15 px-2"
       >
         {cartTotal === 0 ? (
           <SectionTitle text="Your cart is empty" />
