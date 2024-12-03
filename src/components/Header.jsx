@@ -21,7 +21,6 @@ const Header = () => {
     <header
       style={{
         minWidth: "100%",
-        height: "auto",
         position: "fixed",
         zIndex: 11,
         display: "flex",

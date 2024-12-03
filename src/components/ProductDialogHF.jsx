@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { addItem } from "../features/cart/cartSlice";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper as SwiperProduct } from "swiper/react";
+import { SwiperSlide as SwiperSlideProduct } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 // Import Swiper styles
 import "swiper/css";
@@ -199,7 +201,7 @@ const ProductsDialogHF = ({ id, product }) => {
   // setProductsColor(newColors);
   return (
     <dialog id={`my_modal_${id}`} className="modal">
-      <div className="modal-box w-[98%] max-w-[98%] sm:w-[90%] sm:max-w-[90%] h-auto">
+      <div className="modal-box w-[96%] max-w-[96%] sm:w-[90%] sm:max-w-[90%] h-auto">
         <form method="dialog">
           {/* if there is a button in form, it will close the modal */}
           <button className="btn btn-sm text-xl btn-circle btn-ghost absolute right-2 top-2">
@@ -208,15 +210,15 @@ const ProductsDialogHF = ({ id, product }) => {
         </form>
 
         {/* <section> */}
-        <div className="mt-8 mb-4 grid gap-y-1 sm:gap-y-8 lg:gap-x-8 lg:grid-cols-2 xl:gap-x-12 2xl:gap-x-16">
+        <div className="w-[100%] max-w[100%] mt-8 mb-4 grid gap-x-1 gap-y-1 sm:gap-y-8 lg:gap-x-8 lg:grid-cols-2 xl:gap-x-12 2xl:gap-x-16">
           {/* IMAGE */}
           {/* <img
               src={image}
               alt={imageAlt}
               className="w-full max-w-[540px] max-h-[36rem] object-cover rounded-lg lg:w-full border-2 border-slate-500/20"
             /> */}
-          <div>
-            <Swiper
+          <div className="w-100% h-auto">
+            <SwiperProduct
               spaceBetween={30}
               centeredSlides={true}
               // autoplay={{
@@ -229,24 +231,25 @@ const ProductsDialogHF = ({ id, product }) => {
               navigation={true}
               modules={[Pagination, Navigation]}
               // modules={[Autoplay, Pagination, Navigation]}
-              className="mySwiper max-w-[98%] max-h-auto sm:w-[92%] sm:max-w-[34rem] lg:max-h-[30rem] xl:max-h-[34rem] p-4 space-x-4 bg-slate-700 rounded-box"
+              className=" w-[400px] max-w-[96%] h-[100%] max-h-[100%] sm:w-[32rem] lg:h-[32rem] xl:h-[34rem] p-4 space-x-4 bg-slate-700 rounded-box"
             >
               {/* <div className="hidden h-[28rem] lg:carousel carousel-center p-4 space-x-4 bg-slate-700 rounded-box "> */}
               {productPhotos.map((photo, index) => {
                 return (
                   // <div key={image} className="carousel-item">
-                  <SwiperSlide key={`${photo}-${index}`}>
+                  <div className="w-[100%]">
+                  <SwiperSlideProduct key={`${photo}-${index}`}>
                     {/* <SwiperSlide key={nanoid()}> */}
                     <img
                       src={photo}
-                      className="rounded-box w-auto h-auto object-cover mx-auto"
+                      className="rounded-box object-cover h-full max-w-[96%] w-[340px] sm:w-[100%] mx-auto"
                     />
-                  </SwiperSlide>
-                  // </div>
+                  </SwiperSlideProduct>
+                 </div>
                 );
               })}
               {/* </div> */}
-            </Swiper>
+            </SwiperProduct>
             {/* PRODUCT */}
           </div>
           <div>

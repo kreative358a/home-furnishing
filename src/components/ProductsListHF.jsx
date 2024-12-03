@@ -129,6 +129,7 @@ const ProductsGridHF = () => {
   const { pathname, search } = useLocation();
   const navigate = useNavigate();
 
+
   const inputRef = useRef();
 
   useEffect(() => {
@@ -167,6 +168,7 @@ const ProductsGridHF = () => {
       // const dollarsAmount = formatPrice(price);
       const dollarsAmount = price.currentPrice;
       const categoryName = categoryPath[1].name;
+    
       return (
         <div
           key={id}
@@ -180,15 +182,15 @@ const ProductsGridHF = () => {
           <img
             src={image}
             alt={imageAlt}
-            className="h-24 w-24 rounded-lg sm:h-32 sm:w-32 object-cover group-hover:scale-105 transition duration-300 border-2 border-slate-500/20"
+            className="h-[8rem] w-[8rem] rounded-lg sm:h-[10rem] sm:w-[10rem] object-cover group-hover:scale-105 transition duration-300 border-2 border-slate-500/20"
           />
           {/* </figure> */}
           <div className="ml-0 sm:ml-16">
-            <h3 className="capitalize font-medium text-lg">{imageAlt}</h3>
-            <h4 className="capitalize text-md text-neutral-content pt-2">
+            <h3 className="capitalize font-medium text-base lg:text-lg leading-tight" >{imageAlt.split(',')[0] || ""}<br /> {`${imageAlt.split(',')[1] || ""} ${imageAlt.split(',')[2] || ""}`}</h3>
+            <h4 className="capitalize text-md text-success pt-2">
               Home Furnishings
             </h4>
-            <h6 className="text-info pt-2">category: {categoryName}</h6>
+            <h6 className="text-accent pt-2">category: {categoryName}</h6>
             <p
               className="mt-4 px-1 pb-0.5 w-20 border-2 border-secondary/60 hover:border-secondary/80 align-center cursor-pointer text-center rounded bg-secondary/40 hover:bg-secondary/60 text-red-600"
               onClick={() =>
