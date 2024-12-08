@@ -217,7 +217,7 @@ const ProductsDialogHF = ({ id, product }) => {
               alt={imageAlt}
               className="w-full max-w-[540px] max-h-[36rem] object-cover rounded-lg lg:w-full border-2 border-slate-500/20"
             /> */}
-          <div className="w-100% h-auto">
+          <div className="w-100% h-auto ml-[-24px] sm:mx-auto">
             <SwiperProduct
               spaceBetween={30}
               centeredSlides={true}
